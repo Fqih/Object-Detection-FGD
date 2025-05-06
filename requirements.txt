@@ -1,0 +1,6 @@
+numpy==2.2.5
+opencv_python==4.11.0.86
+Pillow==11.2.1
+streamlit==1.35.0
+torch==2.7.0
+ultralytics==8.3.127
