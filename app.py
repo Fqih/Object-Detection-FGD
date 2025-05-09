@@ -226,8 +226,6 @@ def main():
 
     if page == "Tentang Aplikasi":
         st.title("Tentang Aplikasi")
-        st.sidebar.markdown("---")
-        st.sidebar.markdown("© Universitas Gunadarma, 2025")
         st.markdown("""
     Aplikasi ini adalah bentuk keluaran dari kegiatan **Forum Group Discussion (FGD) Asisten MK Praktikum Unggulan (Praktikum DGX) Universitas Gunadarma Semester Genap ATA 2024/2025**.
 
@@ -501,9 +499,26 @@ def main():
             if torch.cuda.is_available():
                 st.sidebar.write(f"GPU: {torch.cuda.get_device_name(0)}")
 
+            footer = """
+            <style>
+            .footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                font-size: 14px;
+                color: gray;
+                padding: 10px 0;
+                background-color: #f0f2f6;
+            }
+            </style>
+            <div class="footer">
+                Universitas Gunadarma<br>
+                Mei 2025
+            </div>
+            """
 
-            st.sidebar.markdown("---")
-            st.sidebar.markdown("© Universitas Gunadarma, 2025")
+            st.markdown(footer, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
