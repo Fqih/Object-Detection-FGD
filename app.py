@@ -484,6 +484,7 @@ def main():
                     except Exception as e:
                         pass
 
+
         # Tambahkan bantuan dan petunjuk
         with st.sidebar:
             st.subheader("Petunjuk Penggunaan 📝")
@@ -498,27 +499,26 @@ def main():
             st.sidebar.write(f"Device: {'GPU' if torch.cuda.is_available() else 'CPU'}")
             if torch.cuda.is_available():
                 st.sidebar.write(f"GPU: {torch.cuda.get_device_name(0)}")
+        
+        footer = """
+        <style>
+        .footer {
+            background-color: var(--secondary-background-color);
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            padding: 15px 0 10px 0;
+            margin-top: 50px;
+            border-top: 1px solid #eaeaea;
+        }
+        </style>
+        <div class="footer">
+            Universitas Gunadarma<br>
+            Mei 2025
+        </div>
+        """
 
-            footer = """
-            <style>
-            .footer {
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                text-align: center;
-                font-size: 14px;
-                color: gray;
-                padding: 10px 0;
-                background-color: #f0f2f6;
-            }
-            </style>
-            <div class="footer">
-                Universitas Gunadarma<br>
-                Mei 2025
-            </div>
-            """
-
-            st.markdown(footer, unsafe_allow_html=True)
+        st.markdown(footer, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
