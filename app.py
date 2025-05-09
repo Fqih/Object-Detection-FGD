@@ -494,12 +494,7 @@ def main():
             3. Hasil deteksi akan ditampilkan beserta informasi waktu inferensi
             4. Untuk membandingkan model, pilih "Bandingkan Semua Model"
             """)
-            
-            # Informasi sistem
-            st.sidebar.write(f"Device: {'GPU' if torch.cuda.is_available() else 'CPU'}")
-            if torch.cuda.is_available():
-                st.sidebar.write(f"GPU: {torch.cuda.get_device_name(0)}")
-        
+
         footer = """
         <style>
         .footer {
